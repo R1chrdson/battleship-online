@@ -10,11 +10,17 @@
   user-select: none;
 }
 
-.container {
-  position: relative;
-  top: 150px; 
+#main-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  margin-top: 50px;
 }
 
 .rightsquare, .leftsquare {
@@ -158,9 +164,6 @@ table {
 }
 
 .notification {
-  z-index: 1;
-  position: absolute;
-  top: 25px;
   height: 75px;
   line-height: 75px;
   width: 500px;
@@ -208,28 +211,30 @@ table {
   background-color: #3369ff;
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
   text-align: center;
-  width: 6em;
+  /*width: 6em;*/
 }
 .button:active {
   transform: scale(1.1, 1.1);
 }
 .button:hover {
   cursor: pointer;
+  background-color: rgb(34, 76, 191);
 }
 
 .play {
   background-color: rgb(51, 189, 85);
 }
 
-.play:hover{
+.play:hover {
   background-color: rgb(109, 199, 132);
 }
 
 .replay {
   position: absolute;
   line-height: 20px;
-  left: 200px;
-  top: 300px;
+  top: 45%;
+  left: 45%;
+  z-index: 2;
 }
 
 .replay:hover {
@@ -274,10 +279,8 @@ table {
 
 .settings {
   display: inline-block;
-  position: absolute;
   width: 350px;
   margin: -5px;
-  margin-top: 430px;
 }
 
 .settings div {

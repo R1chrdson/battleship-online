@@ -1,6 +1,7 @@
 from os import environ
 from flask import Flask
 from flask_socketio import SocketIO
+import app.server
 
 socketio = SocketIO()
 
@@ -15,5 +16,6 @@ def create_app(debug=False):
         print('Please, set `BATTLESHIP_GAME_SECRET` to your environ')
         exit(1)
 
+    app.register_blueprint(server.bp)
     socketio.init_app(app)
     return app

@@ -1,0 +1,1 @@
+This repository contains battleship online game on Python Flask
